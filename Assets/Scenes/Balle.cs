@@ -8,4 +8,7 @@ public class Balle : MonoBehaviour{
     {
         transform.Translate(Time.deltaTime*deplacement);
     }
+    void OnCollisionEnter(Collision collision) {
+        deplacement = Vector3.Reflect(deplacement,collision.contacts[0].normal);
+    }
 }
