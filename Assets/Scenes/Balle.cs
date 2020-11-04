@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Balle : MonoBehaviour{
     public Vector3 deplacement;
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Time.deltaTime*deplacement);
     }
