@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Balle : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+public class Balle : MonoBehaviour{
+    public Vector3 deplacement;
     void Update()
     {
-        
+        transform.Translate(Time.deltaTime*deplacement);
     }
 }
