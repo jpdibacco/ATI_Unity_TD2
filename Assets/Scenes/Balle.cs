@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Balle : MonoBehaviour{
     public Vector3 deplacement;
     public int nbrBriques;
+    public GameObject prefabDebris;
     void FixedUpdate(){
         transform.Translate(Time.deltaTime*deplacement);
     }
@@ -13,6 +14,7 @@ public class Balle : MonoBehaviour{
         if(collision.gameObject.tag == "Brique"){
             Destroy(collision.gameObject);
             nbrBriques--;
+            //Instantiate(prefabDebris,collision.transform.position,Quaternion.identity);
         }
         if (nbrBriques == 0){
             SceneManager.LoadScene("Victory");
