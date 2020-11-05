@@ -9,5 +9,8 @@ public class Balle : MonoBehaviour{
     }
     void OnCollisionEnter(Collision collision) {
         deplacement = Vector3.Reflect(deplacement,collision.contacts[0].normal);
+        if(collision.gameObject.tag == "Brique"){
+            Destroy(collision.gameObject);
+        }
     }
 }
