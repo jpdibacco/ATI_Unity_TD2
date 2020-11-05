@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ZoneFin : MonoBehaviour{
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Balle"){
-            SceneManager.LoadScene("TD2_Title");
+            SceneManager.LoadScene(0);
         }
     }
 }
