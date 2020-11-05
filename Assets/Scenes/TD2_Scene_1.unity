@@ -964,6 +964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deplacement: {x: 10, y: 10, z: 0}
+  nbrBriques: 1
 --- !u!1001 &9184598115513054621
 PrefabInstance:
   m_ObjectHideFlags: 0
