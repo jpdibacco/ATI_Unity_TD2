@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Brique
   - Balle
+  - Raquette
   layers:
   - Default
   - TransparentFX
