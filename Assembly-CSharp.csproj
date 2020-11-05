@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scenes\Balle.cs" />
      <Compile Include="Assets\Scenes\Raquette.cs" />
+     <Compile Include="Assets\Scenes\ZoneFin.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/mnt/Data/Unity3d/2019.4.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
