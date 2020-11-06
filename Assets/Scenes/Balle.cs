@@ -17,7 +17,11 @@ public class Balle : MonoBehaviour{
             Destroy(collision.gameObject);
             nbrBriques--;
             speed+=0.03f;
-            Instantiate(prefabDebris,collision.transform.position,Quaternion.identity);
+            //Instantiate(prefabDebris,collision.transform.position,Quaternion.identity);
+            for (int i = 0; i < 3; i++){
+                Vector3 motion = new Vector3(Random.Range(-2.0f, 2.0f), 0, 0);
+                Instantiate(prefabDebris, transform.position + motion * i, Quaternion.identity);
+            }
         }
         if (nbrBriques == 0){
             SceneManager.LoadScene("Victory");
