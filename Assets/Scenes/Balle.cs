@@ -23,6 +23,7 @@ public class Balle : MonoBehaviour{
                 Instantiate(prefabDebris, transform.position + motion * i, Quaternion.identity);
             }
         }
+        Debug.Log(nbrBriques);
         if (nbrBriques == 0){
             SceneManager.LoadScene("Victory");
         }
