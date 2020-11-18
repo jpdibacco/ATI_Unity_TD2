@@ -8,6 +8,10 @@ public class Balle : MonoBehaviour{
     public GameObject prefabDebris;
     public float sidePower = 1.0f;
     private float speed = 1.0f;
+    AudioSource audio;
+    void Start() {
+         audio = GetComponent<AudioSource>();     
+    }
     void FixedUpdate(){
         transform.Translate(Time.deltaTime*deplacement*speed);
     }
@@ -15,17 +19,14 @@ public class Balle : MonoBehaviour{
         deplacement = Vector3.Reflect(deplacement,collision.contacts[0].normal);
         if(collision.gameObject.tag == "Brique"){
             Destroy(collision.gameObject);
-            nbrBriques--;
+            reduceCollisions();
             speed+=0.03f;
+            audio.Play(0);
             //Instantiate(prefabDebris,collision.transform.position,Quaternion.identity);
             for (int i = 0; i < 3; i++){
                 Vector3 motion = new Vector3(Random.Range(-2.0f, 2.0f), 0, 0);
                 Instantiate(prefabDebris, transform.position + motion * i, Quaternion.identity);
             }
-        }
-        Debug.Log(nbrBriques);
-        if (nbrBriques == 0){
-            SceneManager.LoadScene("Victory");
         }
         if(collision.gameObject.tag == "Raquette"){
             // let's check where it collides:
@@ -37,5 +38,14 @@ public class Balle : MonoBehaviour{
                 transform.Translate(Time.deltaTime* deplacement);
             }
         }
+    }
+    void reduceCollisions(){
+        nbrBriques--;
+    }
+    void Update() {
+        Debug.Log(nbrBriques);
+        if (nbrBriques == 0){
+            SceneManager.LoadScene("Victory");
+        }    
     }
 }

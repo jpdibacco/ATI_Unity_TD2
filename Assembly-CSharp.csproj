@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scenes\Balle.cs" />
      <Compile Include="Assets\Scenes\DebrisBrique.cs" />
      <Compile Include="Assets\Scenes\Raquette.cs" />
+     <Compile Include="Assets\Scenes\SonsdesMurs.cs" />
      <Compile Include="Assets\Scenes\Title.cs" />
      <Compile Include="Assets\Scenes\ZoneFin.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
